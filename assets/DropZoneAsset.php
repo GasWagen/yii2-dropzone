@@ -17,7 +17,7 @@ class DropZoneAsset extends AssetBundle
     ];
 
     public $css = [
-        "dropzone/downloads/css/dropzone.css"
+        //"dropzone/downloads/css/dropzone.css"
     ];
 
     public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
