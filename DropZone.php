@@ -28,6 +28,7 @@ class DropZone extends \yii\base\Widget
     public $uploadUrl = '/site/upload';
     public $dropzoneContainer = 'myDropzone';
     public $previewsContainer = 'previews';
+    public $createPreviewsContainer = true;
     public $autoDiscover = false;
 
     /**
@@ -50,8 +51,10 @@ class DropZone extends \yii\base\Widget
 
     public function run()
     {
-    exit('the end');
-        return Html::tag('div', $this->renderDropzone(), ['id' => $this->dropzoneContainer, 'class' => 'dropzone']);
+        if ($this->createPreviewsContainer) {
+           return Html::tag('div', $this->renderDropzone(), ['id' => $this->dropzoneContainer, 'class' => 'dropzone']);
+        }
+        return '';
     }
 
     private function renderDropzone()
