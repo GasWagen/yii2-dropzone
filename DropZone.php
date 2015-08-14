@@ -50,6 +50,7 @@ class DropZone extends \yii\base\Widget
 
     public function run()
     {
+    exit('the end');
         return Html::tag('div', $this->renderDropzone(), ['id' => $this->dropzoneContainer, 'class' => 'dropzone']);
     }
 
